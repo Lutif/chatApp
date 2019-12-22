@@ -1,0 +1,55 @@
+.joinContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:gainsboro;
+    border:2px black solid;
+    flex-direction: column;
+}
+
+.joinContainer input, .joinContainer button{
+    margin: 10px 10px;
+    font-size:1.6rem;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 2px 2px;
+}
+.joinContainer input:focus, 
+.joinContainer input:hover, .joinContainer button:hover {
+transform: scale(1.1);
+
+}
+
+
+
+.chatContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:gainsboro;
+    border:2px black solid;
+    flex-direction: column;
+}
+.chatContainer > div{
+    background-color: darkkhaki;
+    border:1px solid blue;
+    width: 40%;
+    border-radius-: 2px 2px 0 0;
+}
+.chatContainer > p{
+    background-color: darkkhaki;
+    border:1px solid blue;
+    width: 40%;
+    border-radius: 2px;
+}
+
+.chatContainer > input{
+    width: 40%;
+    font-size: 1.3rem;
+    padding: 5px 0px;
+    border-radius: 2px;
+}
