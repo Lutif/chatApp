@@ -1,15 +1,51 @@
+.header{
+    height: 15vh;
+    background-color:#6c63ff;
+}
+.header img{
+    height: 100px;
+    width: 100px;
+    margin: 10px 10px 10px 100px;
+    border-radius:50%;
+    border:10px solid #a09ce4;
+    border-bottom: none;
+
+}
+
+
 .joinContainer{
     display: flex;
+    z-index: 2;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
-    background-color:gainsboro;
-    border:2px black solid;
-    flex-direction: column;
+    height: 85vh;
+    background-color:#a09ce4;
+    flex-direction: row;
 }
 
-.joinContainer input, .joinContainer button{
+.joinContainer h1{
+    color: whitesmoke;
+}
+.signin{
+    width: 30vw;
+    padding-right: 100px;
+}
+.signinForm{
+    width: 30vw;
+}
+.joinContainer button
+{
+    background-color: #6c63ff;
+color :white;
+font-size : 1.5rem;
+margin:10px 10px;
+border: 2px solid #6c63ff;
+box-shadow: 2px 2px black;
+border-radius: 5px;
+}
+.joinContainer input{
+    
     margin: 10px 10px;
     font-size:1.6rem;
     padding: 5px;

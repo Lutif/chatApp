@@ -3,7 +3,10 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 let socket;
-const endPoint = 'localhost:5000';
+let localhost = 'localhost:5000'
+let heroku = 'https://node-chatapp-server.herokuapp.com';
+const endPoint = localhost;
+    // 'localhost:5000' || 'https://node-chatapp-server.herokuapp.com';
 
 export default function Chat({location}) {
     let [{name, room},setData]= useState({ name:'', room:'' });
@@ -14,8 +17,9 @@ export default function Chat({location}) {
     //handling join 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search)
-        console.log(location);
+        console.log(endPoint);
         socket = io(endPoint);
+        console.log('socket is ', console.log(socket.connected));
         socket.emit('Join', { name, room }, (error) =>
             console.log(error)
         );
