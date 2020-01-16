@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 let socket;
 let localhost = 'localhost:5000'
@@ -36,7 +37,7 @@ export default function Chat({location}) {
     
     useEffect(() => {
         socket.on('message', (message) => {
-            setMessages([...messages, message]);
+            setMessages([...messages, message]) ;
 
         })
     }, [messages]);
@@ -49,16 +50,21 @@ export default function Chat({location}) {
     
     }
 
-        return (
+    return (
+            <div className='chatPage'>
             <div className="chatContainer">
-                <div >
-                    <p>messages</p>
+            <ScrollToBottom  className="chatContainerScroll">
+            <div >
                     {messages.map((message)=> <p key={message.user+message.text}>{message.user}:  {message.text}</p>)}
                 </div>
-                <input type="text"
+            </ScrollToBottom>
+            <div className="chatForm">
+            <input type="text"
                     value={message}
                     onChange={(event) => setMessage(event.target.value)}
                     onKeyPress={(event) => event.key === "Enter" ? sendMessage(event) : null} />
-                    {/* <button onClick={sendMessafe}>Send</button> */}
+                <button onClick={sendMessage}>Send</button>
                 </div>
+            </div>
+            </div>
     )}
