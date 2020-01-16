@@ -6,7 +6,7 @@ import ScrollToBottom from 'react-scroll-to-bottom';
 let socket;
 let localhost = 'localhost:5000'
 let heroku = 'https://node-chatapp-server.herokuapp.com';
-const endPoint = localhost;
+const endPoint = heroku;
     // 'localhost:5000' || 'https://node-chatapp-server.herokuapp.com';
 
 export default function Chat({location}) {
