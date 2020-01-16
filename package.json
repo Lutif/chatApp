@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lutif.github.io/chatApp",
+  "homepage": "https://lutif.github.io/chatApp/",
   "dependencies": {
     "@material-ui/core": "^4.8.0",
     "@testing-library/jest-dom": "^4.2.4",
